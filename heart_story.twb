@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<workbook original-version='18.1' source-platform='windows'>
+  <datasources>
+    <datasource name='HeartData' caption='Heart Disease Dataset' inline='true'>
+      <connection class='textscan' directory='.' filename='Heart_new2.csv' />
+    </datasource>
+  </datasources>
+
+  <worksheets>
+    <worksheet name='Age vs Heart Disease'>
+      <table>
+        <view>
+          <datasource>HeartData</datasource>
+        </view>
+      </table>
+    </worksheet>
+
+    <worksheet name='Lifestyle Impact'>
+      <table>
+        <view>
+          <datasource>HeartData</datasource>
+        </view>
+      </table>
+    </worksheet>
+  </worksheets>
+
+  <stories>
+    <story name='Heart Disease Story'>
+      <points>
+        <point caption='Age Impact Analysis'>
+          <worksheet>Age vs Heart Disease</worksheet>
+        </point>
+        <point caption='Lifestyle Risk Factors'>
+          <worksheet>Lifestyle Impact</worksheet>
+        </point>
+      </points>
+    </story>
+  </stories>
+</workbook>

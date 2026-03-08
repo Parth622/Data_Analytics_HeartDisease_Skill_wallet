@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<workbook original-version='18.1' source-platform='windows'>
+  <datasources>
+    <datasource name='HeartData' caption='Heart Disease Dataset' inline='true'>
+      <connection class='textscan' directory='.' filename='Heart_new2.csv' />
+    </datasource>
+  </datasources>
+
+  <worksheets>
+    <worksheet name='Heart Disease Overview'>
+      <table>
+        <view>
+          <datasource>HeartData</datasource>
+        </view>
+      </table>
+    </worksheet>
+  </worksheets>
+
+  <dashboards>
+    <dashboard name='Heart Disease Dashboard'>
+      <zones>
+        <zone name='Sheet1' type='worksheet'>
+          <worksheet>Heart Disease Overview</worksheet>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+</workbook>
