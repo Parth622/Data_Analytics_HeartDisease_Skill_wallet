@@ -1,0 +1,64 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<div class="tableau-shell row g-3">
+    <aside class="col-xl-2 col-lg-3">
+        <div class="card filter-panel p-3">
+            <div class="panel-title">Filters</div>
+            <div class="panel-subtitle">Interactive controls</div>
+
+            <label class="form-label mt-2">Gender</label>
+            <select id="filter-gender" class="form-select mb-3">
+                <option>All</option>
+                {% for value in filters.genders %}<option>{{ value }}</option>{% endfor %}
+            </select>
+
+            <label class="form-label">Age Group</label>
+            <select id="filter-age" class="form-select mb-3">
+                <option>All</option>
+                {% for value in filters.age_groups %}<option>{{ value }}</option>{% endfor %}
+            </select>
+
+            <label class="form-label">Smoking</label>
+            <select id="filter-smoking" class="form-select mb-3">
+                <option>All</option>
+                {% for value in filters.smoking %}<option>{{ value }}</option>{% endfor %}
+            </select>
+
+            <label class="form-label">Alcohol</label>
+            <select id="filter-alcohol" class="form-select">
+                <option>All</option>
+                {% for value in filters.alcohol %}<option>{{ value }}</option>{% endfor %}
+            </select>
+        </div>
+    </aside>
+
+    <section class="col-xl-10 col-lg-9">
+        <div class="card workbook-head p-3 mb-3">
+            <div class="workbook-title">Heart Disease Analytics Dashboard</div>
+            <div class="workbook-subtitle">Tableau-style workbook view powered by Plotly + Flask</div>
+        </div>
+
+        <div class="row g-3 mb-2" id="kpi-cards">
+            <div class="col-md-3"><div class="card kpi"><h6>Total Patients</h6><h3 id="kpi-total">-</h3></div></div>
+            <div class="col-md-3"><div class="card kpi"><h6>Heart Disease Cases</h6><h3 id="kpi-cases">-</h3></div></div>
+            <div class="col-md-3"><div class="card kpi"><h6>Average Age</h6><h3 id="kpi-age">-</h3></div></div>
+            <div class="col-md-3"><div class="card kpi"><h6>Avg Cholesterol (Derived)</h6><h3 id="kpi-chol">-</h3></div></div>
+        </div>
+
+        <div class="row g-3">
+            <div class="col-md-6"><div class="card viz-card"><div class="sheet-title">Sheet 1</div><div id="chart-prevalence"></div></div></div>
+            <div class="col-md-6"><div class="card viz-card"><div class="sheet-title">Sheet 2</div><div id="chart-heatmap"></div></div></div>
+            <div class="col-md-6"><div class="card viz-card"><div class="sheet-title">Sheet 3</div><div id="chart-age-risk"></div></div></div>
+            <div class="col-md-6"><div class="card viz-card"><div class="sheet-title">Sheet 4</div><div id="chart-gender"></div></div></div>
+
+            <div class="col-md-6"><div class="card viz-card"><div class="sheet-title">Sheet 5</div><div id="chart-age-hist"></div></div></div>
+            <div class="col-md-6"><div class="card viz-card"><div class="sheet-title">Sheet 6</div><div id="chart-risk-dist"></div></div></div>
+            <div class="col-md-6"><div class="card viz-card"><div class="sheet-title">Sheet 7</div><div id="chart-smoking-hd"></div></div></div>
+            <div class="col-md-6"><div class="card viz-card"><div class="sheet-title">Sheet 8</div><div id="chart-alcohol-hd"></div></div></div>
+
+            <div class="col-md-6"><div class="card viz-card"><div class="sheet-title">Sheet 9</div><div id="chart-gen-health"></div></div></div>
+            <div class="col-md-6"><div class="card viz-card"><div class="sheet-title">Sheet 10</div><div id="chart-bmi"></div></div></div>
+        </div>
+    </section>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<div class="card workbook-head p-3 mb-3">
+    <div class="workbook-title">Documentation Workbook</div>
+    <div class="workbook-subtitle">Technical notes and implementation details</div>
+</div>
+
+<div class="card p-4 doc-content">
+    <h3>Project Objective</h3>
+    <p>Deliver a Tableau-style heart disease analytics portal with interactive BI workflows powered by Flask, SQLite, Pandas, and Plotly.</p>
+
+    <h4>Dataset Description</h4>
+    <p><strong>File:</strong> Heart_new2.csv. The dataset includes health and lifestyle indicators such as smoking, alcohol use, activity, age bands, and heart disease label.</p>
+
+    <h4>Data Preparation Process</h4>
+    <p>Records are de-duplicated, missing values are imputed, numeric fields are normalized, and derived fields are generated: Age Group, Cholesterol Category, Blood Pressure Category, Lifestyle Risk Score.</p>
+
+    <h4>SQL Analysis</h4>
+    <p>SQLite stores processed records in <code>heart_data</code>. Query modules return totals, prevalence, average cholesterol estimate, average age, gender distribution, smoking impact, and alcohol impact.</p>
+
+    <h4>Dashboard Explanation</h4>
+    <p>The dashboard contains KPI cards, a Tableau-like filter pane, and 10 interactive sheets. All visualizations update dynamically based on selected filters.</p>
+
+    <h4>Story Insights</h4>
+    <p>The story view presents narrative scenes around age risk, lifestyle factors, and gender trends to support business communication and interpretation.</p>
+
+    <h4>Performance Testing</h4>
+    <p>A dedicated page reports row count, number of visualizations, calculated fields, and average SQL query execution time.</p>
+
+    <h4>Future Improvements</h4>
+    <p>Add authentication, role-based access, model scoring APIs, and deployment on managed cloud services with CI/CD.</p>
+</div>
+{% endblock %}

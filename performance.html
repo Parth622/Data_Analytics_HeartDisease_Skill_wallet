@@ -1,0 +1,14 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<div class="card workbook-head p-3 mb-3">
+    <div class="workbook-title">Performance Workbook</div>
+    <div class="workbook-subtitle">Execution and analytics throughput metrics</div>
+</div>
+
+<div class="row g-3" id="performance-cards">
+    <div class="col-md-3"><div class="card kpi"><h6>Dataset Row Count</h6><h3 id="perf-rows">-</h3></div></div>
+    <div class="col-md-3"><div class="card kpi"><h6>Visualizations</h6><h3 id="perf-viz">-</h3></div></div>
+    <div class="col-md-3"><div class="card kpi"><h6>Calculated Fields</h6><h3 id="perf-calc">-</h3></div></div>
+    <div class="col-md-3"><div class="card kpi"><h6>Avg SQL Query Time (ms)</h6><h3 id="perf-query">-</h3></div></div>
+</div>
+{% endblock %}

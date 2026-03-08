@@ -1,0 +1,17 @@
+﻿{% extends "layout.html" %}
+{% block content %}
+<div class="card workbook-head p-3 mb-3">
+    <div class="workbook-title">Story Workbook</div>
+    <div class="workbook-subtitle">Narrative scenes with interactive evidence</div>
+</div>
+
+<div class="row g-3">
+    <div class="col-12"><div class="card p-4"><h3>Project Overview</h3><p>This story explores how age, lifestyle, and demographic patterns relate to heart disease outcomes.</p></div></div>
+    <div class="col-lg-6"><div class="card viz-card"><div class="sheet-title">Scene 1</div><div id="story-prevalence"></div></div></div>
+    <div class="col-lg-6"><div class="card viz-card"><div class="sheet-title">Scene 2</div><div id="story-age-risk"></div></div></div>
+    <div class="col-lg-6"><div class="card viz-card"><div class="sheet-title">Scene 3</div><div id="story-heatmap"></div></div></div>
+    <div class="col-lg-6"><div class="card viz-card"><div class="sheet-title">Scene 4</div><div id="story-gender"></div></div></div>
+    <div class="col-12"><div class="card p-4"><h4>Key Insights</h4><ul><li>Risk increases progressively with age cohorts.</li><li>Smoking and low physical activity align with elevated risk scores.</li><li>Combined lifestyle factors show stronger association than single factors.</li></ul></div></div>
+</div>
+<script>window.renderStory = true;</script>
+{% endblock %}

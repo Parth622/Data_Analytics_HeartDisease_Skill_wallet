@@ -1,0 +1,128 @@
+﻿:root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --text: #223;
+    --muted: #667085;
+    --line: #dfe5ef;
+    --tableau-blue: #4e79a7;
+}
+
+body {
+    background: linear-gradient(180deg, #f8faff 0%, #f5f7fb 58%, #eef2f8 100%);
+    color: var(--text);
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.app-header {
+    padding: 1rem 1.25rem 0.25rem;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 1.65rem;
+}
+
+.app-header p {
+    margin: 0.2rem 0 0;
+    color: var(--muted);
+}
+
+.page-nav .nav-link {
+    color: #1f3b7a;
+    background: #e9eefb;
+    margin-right: 0.5rem;
+}
+
+.page-nav .nav-link.active,
+.page-nav .nav-link:hover {
+    color: #fff;
+    background: #1f3b7a;
+}
+
+.card {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(35, 48, 66, 0.08);
+    background: var(--card);
+}
+
+.workbook-head {
+    border-left: 5px solid var(--tableau-blue);
+}
+
+.workbook-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.workbook-subtitle {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.tableau-shell {
+    align-items: flex-start;
+}
+
+.filter-panel {
+    position: sticky;
+    top: 1rem;
+}
+
+.panel-title {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.panel-subtitle {
+    color: var(--muted);
+    font-size: 0.85rem;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.kpi {
+    padding: 1rem;
+    min-height: 112px;
+}
+
+.kpi h6 {
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.viz-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.sheet-title {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #2f3b4e;
+    background: #f8fafd;
+    border-bottom: 1px solid var(--line);
+    padding: 0.45rem 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.viz-card > div:last-child {
+    min-height: 330px;
+    padding: 0.2rem;
+}
+
+.doc-content h4,
+.doc-content h3 {
+    margin-top: 1rem;
+}
+
+@media (max-width: 992px) {
+    .viz-card > div:last-child {
+        min-height: 300px;
+    }
+}
